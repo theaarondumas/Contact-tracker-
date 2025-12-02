@@ -1,1 +1,47 @@
+# TechnicianCRM – Outreach Tracker for *The Technician*
 
+An iOS CRM-style app (built with SwiftUI) to track industry outreach for the feature film project **THE TECHNICIAN**.
+
+You can use it to track:
+
+- Production companies
+- Directors
+- Managers and agents
+- Status of outreach (Not Contacted, Awaiting Reply, Deck Sent, Script Requested, Meeting Scheduled, Passed)
+- Priority (Top / Medium / Low)
+- Notes and follow-up dates
+
+## Features
+
+- ✅ Contacts list with color-coded status + priority badges  
+- ✅ Detail view to edit status, priority, notes, and dates  
+- ✅ Simple dashboard summarizing:
+  - Total contacts
+  - Count by status
+  - Count by priority
+
+Built with:
+
+- Swift 5+
+- SwiftUI
+- Xcode 15+ (recommended)
+
+---
+
+## Project Structure
+
+```text
+TechnicianCRM/
+├─ README.md
+└─ TechnicianCRMApp/
+   ├─ TechnicianCRMApp.swift       # App entry point
+   ├─ ContentView.swift            # TabView (Contacts + Dashboard)
+   ├─ Models/
+   │  └─ Contact.swift             # Contact model, status + priority enums
+   ├─ Data/
+   │  └─ ContactStore.swift        # ObservableObject with sample data
+   └─ Views/
+      ├─ ContactsView.swift        # List + filters
+      ├─ ContactRowView.swift      # Single row with color badges
+      ├─ ContactDetailView.swift   # Form for editing one contact
+      └─ DashboardView.swift       # Summary metrics
